@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - GreenCycle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <style>
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: rgba(8, 247, 104, 0.9); /* Darker green with some transparency */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-green-700 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-white text-2xl font-bold" href="#">
+        GreenCycle
+      </a>
+      <div class="md:hidden">
+        <button id="navbar-toggle" class="text-white focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul id="navbar" class="hidden md:flex space-x-4">
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="index.html">Home</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="about.html">About Us</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="composting.html">How to Compost</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="programs.html">Community Programs</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="resources.html">Resources</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="get-involved.html">Get Involved</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="pt-20 pb-5 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-green-700">Contact Us</h1>
+      <p class="text-lg text-gray-700 mt-0">If you have any questions or would like to learn more about our programs, please reach out!</p>
+    </div>
+  </section>
+  <main class="container mx-auto px-4">
+    <form action="#" method="post" class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
+        <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded" />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+        <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded" />
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
+        <textarea id="message" name="message" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-300 transition duration-300">Send Message</button>
+    </form>
+  </main>
+  <footer class="bg-green-700 text-white py-10 mt-10">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a class="text-white hover:text-green-300 transition duration-300" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-white hover:text-green-300 transition duration-300" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="text-white hover:text-green-300 transition duration-300" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="text-white hover:text-green-300 transition duration-300" href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>© 2024 GreenCycle. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Navbar toggle for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarToggle = document.getElementById('navbar-toggle');
+      const navbar = document.getElementById('navbar');
+      if (navbarToggle && navbar) {
+        navbarToggle.addEventListener('click', function () {
+          navbar.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

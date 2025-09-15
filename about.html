@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about GreenCycle’s mission, values, and the team working to make composting accessible to everyone.">
+  <title>About Us - GreenCycle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <style>
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: rgba(8, 247, 20, 0.9); /* Darker green with some transparency */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-green-700 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-white text-2xl font-bold" href="#">
+        GreenCycle
+      </a>
+      <div class="md:hidden">
+        <button id="navbar-toggle" class="text-white focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul id="navbar" class="hidden md:flex space-x-4">
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="index.html">Home</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="about.html">About Us</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="composting.html">How to Compost</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="programs.html">Community Programs</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="resources.html">Resources</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="get-involved.html">Get Involved</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="about-section py-20 bg-gray-200 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-green-700">About Us</h1>
+      <p class="mt-4 text-lg">Learn about GreenCycle’s mission, values, and the team working to make composting accessible to everyone.</p>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="about-card bg-white p-6 rounded shadow hover:shadow-lg transition duration-300">
+          <h3 class="text-xl font-bold">Our Mission</h3>
+          <p class="mt-2">We aim to reduce waste and enrich communities through accessible composting programs.</p>
+        </div>
+        <div class="about-card bg-white p-6 rounded shadow hover:shadow-lg transition duration-300 cursor-pointer" onclick="openModal()">
+          <h3 class="text-xl font-bold">Our Team</h3>
+          <p class="mt-2">Meet the dedicated individuals behind GreenCycle who are passionate about sustainable practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="team-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" aria-hidden="true">
+    <div class="bg-white p-6 rounded shadow-lg">
+      <h2 class="text-2xl font-bold">Meet Our Team</h2>
+      <p class="mt-2">Our team consists of experts in sustainability, community outreach, and environmental education, all dedicated to making a positive impact.</p>
+      <button class="mt-4 text-red-500" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-10 right-10 bg-green-700 text-white p-2 rounded-full hidden" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-10">
+    <div class="container mx-auto text-center">
+      <p>© 2024 GreenCycle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar toggle for mobile
+    document.getElementById('navbar-toggle').addEventListener('click', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('hidden');
+    });
+
+    // Modal functions
+    function openModal() {
+      document.getElementById('team-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('team-modal').classList.add('hidden');
+    }
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    };
+
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+</body>
+</html>

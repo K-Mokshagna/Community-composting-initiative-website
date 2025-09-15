@@ -1,0 +1,150 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }
+  }
+  
+  @keyframes blowIn {
+    0% {
+        transform: scale(0.8) rotate(-10deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05) rotate(5deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  .animate-rotate-in {
+    animation: rotateIn 1s ease-in-out;
+  }
+  
+  .animate-blow-in {
+    animation: blowIn 1s ease-in-out;
+  }
+  /* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Navbar styles */
+  nav {
+    background-color: #2f855a;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #2f855a;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  /* About Us Section styles */
+  .about-section {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .about-section h1 {
+    animation: slideInDown 1.5s ease-out;
+  }
+  
+  .about-section p {
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Card styles */
+  .about-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: scaleUp 1.5s ease-out;
+  }
+  
+  .about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.95);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  

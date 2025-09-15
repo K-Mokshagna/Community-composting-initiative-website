@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about GreenCycle’s mission, values, and the team working to make composting accessible to everyone.">
+  <title>How to Compost - GreenCycle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <style>
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: rgba(8, 247, 104, 0.9); /* Darker green with some transparency */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-green-700 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-white text-2xl font-bold" href="#">
+        GreenCycle
+      </a>
+      <div class="md:hidden">
+        <button id="navbar-toggle" class="text-white focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul id="navbar" class="hidden md:flex space-x-4">
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="index.html">Home</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="about.html">About Us</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="composting.html">How to Compost</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="programs.html">Community Programs</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="resources.html">Resources</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="get-involved.html">Get Involved</a></li>
+        <li><a class="text-white hover:text-green-300 transition duration-300" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="mt-8 py-5 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-green-700">Composting Methods</h1>
+      <p class="text-lg text-gray-700 mt-4">Different composting methods are listed here:</p>
+    </div>
+  </section>
+  <main>
+    <ul>
+        <li><strong>->Hot Composting:</strong> A quick method using heat to decompose materials.</li>
+        <li><strong>->Cold Composting:</strong> A slower method that requires less effort.</li>
+        <li><strong>->Worm Composting:</strong> Using worms to break down organic matter.</li>
+    </ul>
+    <h2>Compostable Materials</h2>
+    <p>Learn what can and cannot be composted to ensure a successful composting process.</p>
+    <a href="https://seafood.oregonstate.edu/sites/agscid7/files/snic/basic-principles-of-composting-lsu.pdf" class="cta" target="_blank">Download Compostable Materials List</a>
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-10">
+    <div class="container mx-auto text-center">
+      <p>© 2024 GreenCycle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar toggle for mobile
+    document.getElementById('navbar-toggle').addEventListener('click', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('hidden');
+    });
+
+    // Modal functions
+    function openModal() {
+      document.getElementById('team-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('team-modal').classList.add('hidden');
+    }
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('back-to-top');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    };
+
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+</body>
+</html>

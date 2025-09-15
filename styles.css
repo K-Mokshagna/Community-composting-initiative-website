@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; /* Darker green */
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #444;
+}
+
+.dark-mode footer {
+    background-color: #444;
+}
+
+.dark-mode article {
+    background-color: #555;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Yellow hover effect */
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e8f5e9;
+    position: relative;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.welcome-image {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    animation: slideIn 1s ease forwards;
+}
+
+.events-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}

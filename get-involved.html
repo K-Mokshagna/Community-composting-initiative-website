@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Involved - GreenCycle</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+      nav {
+        background-color: rgba(8, 247, 104, 0.9); /* Darker green with some transparency */
+      }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-green-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a class="text-white text-2xl font-bold" href="index.html">
+                GreenCycle
+            </a>
+            <div class="md:hidden">
+                <button id="navbar-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+<ul id="navbar" class="hidden md:flex space-x-4">
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="index.html">Home</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="about.html">About Us</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="composting.html">How to Compost</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="programs.html">Community Programs</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="resources.html">Resources</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="get-involved.html">Get Involved</a></li>
+                <li><a class="text-white hover:text-green-300 transition duration-300" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+    <header>
+        <h1>Get Involved</h1>
+    </header>
+    <h2><strong>Join Us</strong></h2>
+        <p>Become a part of our community composting initiative!</p>
+        <h3>Volunteer Opportunities</h3>
+        <ul>
+            <li>Event Setup and Support</li>
+            <li>Education and Outreach</li>
+            <li>Composting Workshops</li>
+        </ul>
+        <h3>Make a Donation</h3>
+        <p>Your support helps us expand our programs. <a href="donate.html">Donate here</a>.</p>
+        <h3>Sign Up for Our Newsletter</h3>
+        <form action="#" method="post">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 GreenCycle | <a href="contact.html">Contact Us</a></p>
+    </footer>
+    <script>
+        // Navbar toggle for mobile
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggle = document.getElementById('navbar-toggle');
+            const navbar = document.getElementById('navbar');
+            if (navbarToggle && navbar) {
+                navbarToggle.addEventListener('click', function () {
+                    navbar.classList.toggle('hidden');
+                });
+            }
+
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('back-to-top');
+            if (backToTopButton) {
+                window.onscroll = function () {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        backToTopButton.classList.remove('hidden');
+                    } else {
+                        backToTopButton.classList.add('hidden');
+                    }
+                };
+
+                backToTopButton.addEventListener('click', function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('team-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('team-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
